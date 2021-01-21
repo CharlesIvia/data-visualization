@@ -7,7 +7,13 @@ df = pd.read_csv("happiness.csv")
 
 print(df.head())
 
-sns.scatterplot("Economy (GDP per Capita)", "Happiness Score", data=df)
+sns.scatterplot(
+    x="Economy (GDP per Capita)",
+    y="Happiness Score",
+    data=df,
+    hue="Region",
+    size="Freedom",
+)
 
 # From this plot, we can conclude that there's a strong positive correlation between
 # the economy (GDP per capita) and score of happiness
